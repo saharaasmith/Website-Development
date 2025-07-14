@@ -1,12 +1,17 @@
+
+
+
+/* Home Page */
 body {
     font-family: 'Georgia', 'Times New Roman';
+    font-size: 18px;
     background-color: #FFFFFF;
     color: #232E4D;
     text-align: center;
 }
 
 #webname-tright, nav {
-    font-size: small;
+    font-size: large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-right: 35px
 }
@@ -31,4 +36,120 @@ body {
     background-color: #00000034;
     border-width: 12px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.motto {
+    font-family: 'Georgia', 'Times New Roman';
+    font-size: 18px;
+    background-color: #FFFFFF;
+    color: #232E4D;
+    text-align: center;
+}
+
+
+/* Sign Up Page --- DONT FORGET JAVASCRIPT */
+.signup {
+    font-size: 12pt;
+    text-align: center;
+    font-family: 'Preconnect', 'Georgia', 'Times New Roman';
+    min-height: 100vh;
+    background-image: url('signin-back.jpg');
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+}
+.wrapper {
+    box-sizing: border-box;
+    background-color: white;
+    height: 200vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signup h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+form > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+form label {
+    height: 50px;
+    width: 50px;
+    background-color: #d1d9f2;
+    fill: white;
+    color: white;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid #FFFFFF;
+    border-left: none;
+    background-color: #FFFFFF;
+    transition: 150ms ease;
+}
+form input:hover {
+    border-color: #C0D6DF;
+}
+form input:focus {
+    outline: none;
+    border-color: #C0D6DF
+}
+div:has(input:focus) > label {
+    background-color: #C0D6DF;
+}
+form input::placeholder {
+    color: rgb(118 118 118);
+}
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 14px;
+    background-color: #d1d9f2;
+    font: inherit;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #C0D6DF;
+}
+#login-plink a {
+    text-decoration: none;
+    color: black;
+}
+#login-plink:hover {
+    text-decoration: underline;
+}
+@media(max-width: 1100px) {
+    .wrapper {
+        width: min(600px, 100%);
+    }
 }
