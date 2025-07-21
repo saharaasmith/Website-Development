@@ -16,10 +16,7 @@ body {
     display: flex;
     align-items: center;
     padding: 12px;
-    background-color: #E6FFFF;
-    border-width: 12px;
-    border-style: groove;
-    border-color: #d1d9f2;
+    background-color: #C0D6DF;
     justify-content: space-between;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -31,6 +28,9 @@ body {
     background-color: #00000034;
     border-width: 12px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#contact {
+    color: #565252;
 }
 .motto {
     font-family: 'Georgia', 'Times New Roman';
@@ -57,6 +57,48 @@ body {
     width: auto;
 }
 
+#start-now, #review-vid, #review-site {
+    text-decoration: none;
+}
+#review-site:hover {
+    color: #6ea6bc;
+    transition: 0.3s;
+}
+#review-vid:hover {
+    color: #6ea6bc;
+    transition: 0.3s;
+}
+
+#start-now:hover {
+    color: #6ea6bc;
+    transition: 0.3s;
+}
+/* Home Page - navigation links */
+#home, #dash, #explore, #pricing, #sign {
+    background: none;
+    color:black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#home {             /* do this for every page based on what youre on */
+    text-decoration: underline;
+}
+#home:hover {
+    color: white;
+}
+#dash:hover {
+    color: white;
+}
+#explore:hover {
+    color: white;
+}
+#pricing:hover {
+    color: white;
+}
+#sign:hover {
+    color: white;
+}
 
 
 /* Sign Up Page --- DONT FORGET JAVASCRIPT */
@@ -113,7 +155,6 @@ form label {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-
 }
 form input {
     box-sizing: border-box;
@@ -152,6 +193,7 @@ form button {
 }
 form button:hover {
     background-color: #C0D6DF;
+    transition: 0.3s;
 }
 #login-plink a {
     text-decoration: none;
@@ -177,17 +219,31 @@ form button:hover {
 /* Log In Page --- DONT FORGET JAVASCRIPT */
 
 .login-topbox {         /* figure out how to make into a box like home page - less designed */
-    width: max(40%, 600px);
-    box-sizing: border-box;
-    border-radius: 0 10px 10px 0;
+    color: white;
     flex-direction: column;
     display: flex;
     align-items: center;
-    background-color: #FFFFFF;
-    border-color: #FFFFFF;
     justify-content: space-between;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+
+#l-home, #l-dash, #l-explore, #l-pricing {
+    color: white;
+}
+#l-home:hover {
+    color: #C0D6DF;
+}
+#l-dash:hover {
+    color: #C0D6DF;
+}
+#l-explore:hover {
+    color: #C0D6DF;
+}
+#l-pricing:hover {
+    color: #C0D6DF;
+}
+
 
 .login {
     font-size: 12pt;
@@ -242,7 +298,6 @@ form label {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-
 }
 form input {
     box-sizing: border-box;
@@ -281,6 +336,7 @@ form button {
 }
 form button:hover {
     background-color: #C0D6DF;
+    transition: 0.3s;
 }
 #login-plink a {
     text-decoration: none;
