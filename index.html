@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>explorer.com</title>
+        <title>Explorer - Plan and Remember Every Trip</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <meta name="description" content="Plan, collaborate, and organize information for your future trips! Join now to make each vacation or work trip memorable and stress-free!">        <meta name="author" content="Sahara Smith">
+        <meta name="keywords" content="Trips, Planning, Collaboration, Vacation, Travel">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="topbox">       <!--All in one box horizontally-->
             <div class="logo">
-                <img src="logo.png" alt="Explorer Logo" class="logo-img">
+                <a href="index.html">
+                    <img src="logo.png" alt="Explorer Logo" class="logo-img">
+                </a>    
                 <p id="webname-tright">Explorer</p>
             </div>
             <nav>
                 <a id="home" href="index.html" aria-label="Go to Home">Home</a>
-                <a id="dash" href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a>
-                <a id="explore" href="explore.html" aria-label="Go to Explore Page">Explore</a>
+                <a id="dash" href="login.html" aria-label="Go to Dashboard">Dashboard</a>
                 <a id="pricing" href="pricing.html" aria-label="Go to Pricing">Pricing</a>
                 <a id="sign" href="signup.html" aria-label='Go to Sign Up'>Sign Up</a>
+                <a id="explore" href="explore.html" aria-label="Go to About Explorer Page">About Explorer</a>
             </nav>
+        </div>
+        
+        <button id="openpopup">Open Popup</button>
+        <div class="popup" id="popup">
+            <div class="popupinfo">
+                <h2>Want an Upgrade?</h2>
+                <p>Try out our Gold and Premium Plans to make planning even easier!</p>
+                <button id="closepopup">Close</button>
+            </div>
         </div>
 
 
@@ -27,39 +41,36 @@
                 <p id="motto">Plan Trips, Share Experiences, and Remember every Second!</p>
             </header>
         </div>
-
-        <h3>Explore other trips...</h3>
-        <section class="explore">       <!--Zig-Zag Boxes to Explore Other Trips-->
-            <div class="trssop-row">
-                <div class="box box1">Tim Berry</div>
-                <div class="box box2">Hannah Randolph</div>
+        <div class="reviews-label">
+            <a id="reviews-label1" href="explore.html">Reviews</a>
+        </div>
+        <div class="reviews-box">
+            <div class="review1">
+                <p id="1-review">"It was so much fun! We enjoyed seeing the many forms of transportation! Explorer kept us on track! Take a look at my <a id="review-vid" href="review1.mp4" target="_blank">video!</a></p>
+                <small id="1review">- Adam Bumper </small>
             </div>
-            <div class="bottom-row">
-                <div class="box box3">Amy Whitehouse</div>
-                <div class="box box4">John Becker</div>
+            <div class="review2">
+                <p id="2-review">"My family enjoyed our trip! Explorer helped my husband and I focus more on fun, rather than worrying about keeping track of everything!"</p>
+                <small id="2review">- Jordyn Smalls </small>
             </div>
-        </section>
-
-        <section class="reviews">       <!--Circle to state the Reviews Section-->
-            <div class="reviews-label">Reviews</div>
-            <div class="reviews-box">
-                <div class="review1">
-                    <p id="1review">"It was so much fun! We enjoyed seeing the many forms of transportation! Explorer kept us on track! Take a look at my <a id="review-vid" href="review1.mp4" target="_blank">video!</a></p>
-                    <small id="1review">- Adam Bumper </small>
-                </div>
-                <div class="review2">
-                    <p id="2review">"My family enjoyed our trip! Explorer helped my husband focus more on fun than worrying about keeping track of everything!"</p>
-                    <small id="2review">- Jordyn Smalls </small>
-                </div>
-            </div>
-        </section>
-        <p></p><a id="start-now" href="signup.html">Start Your Journey Now!</a></p>
-        <p id="places-togo">Need Help With a Place to Go? <a id="review-site" href="https://eugene.kaspersky.com/top-100-must-see-places-in-the-world/" target="_blank"><em>TOP-100 MUST-SEE PLACES IN THE WORLD by Nota Bene</em></a></p>
-
-        <footer>
-            <p id="footer">
-                2025   Explorer - Sahara Smith   --   <a id="contact" href="mailto:saharasmith37@gmail.com" target="_blank">Contact Founder</a>    "All Rights Reserved"
-            </p>
-        </footer>
+        </div>
+        <p><a id="start-now" href="signup.html">Start Your Journey Now!</a></p>
+        
+        <div>
+            <footer>
+                <p id="footer">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Explorer Logo" class="logo-img">
+                    </a> 
+                    2025   Explorer -- Sahara Smith 
+                    <a id="contact" href="mailto:saharasmith37@gmail.com" target="_blank">
+                        <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg> 
+                    </a>
+                    <a id="instagram" href="https://www.instagram.com/explorercompany.wd" target="_blank">Follow us on Instagram</a>
+                    -- All Rights Reserved
+                    
+                </p>
+            </footer>
+        </div>
     </body>
 </html>
