@@ -1,49 +1,176 @@
+/* Home Page - popup */
+.popup {
+    box-sizing: border-box;
+}
+#openpopup {
+    background-color: rgb(123, 201, 234);
+    border-radius: 12px;
+    border: 0;
+    color: white;
+    padding: 5px 12px;
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    z-index: 1000;
+}
+
+#closepopup {
+    background-color: rgb(175, 214, 231);
+    border-radius: 12px;
+    border: 0;
+    color: white;
+    padding: 5px 12px;
+}
+#openpopup:active {
+    opacity: 0.8;
+}
+#closepopup:active {
+    opacity: 0.8;
+}
+.popup { 
+    font-size: large;
+    background-color: rgb(201, 229, 241);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+.popup.open + #openpopup {
+    display: none;
+}
+
+.popup.open {
+    opacity: 1;
+    z-index: 999;
+}
+.popupinfo {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-align: center;
+    width: 100%;
+}
+.popupinfo h2 {
+    margin: 0;
+}
+.popupinfo p {
+    line-height: 12px;
+    margin: 10px 0;
+}
+
+
+
 /* Home Page */
 body {
-    font-family: 'Georgia', 'Times New Roman';
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     background-color: #FFFFFF;
-    color: #232E4D;
+    color: rgb(35, 46, 77);
     text-align: center;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #webname-tright, nav {
     font-size: large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-right: 35px
+    margin-right: 25px
 }
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav a {
+    margin: 5px;
+}
+
+#nearlogo {
+    color: rgb(35, 46, 77);
+    text-decoration: none;
+}
+#webname-tright:hover {
+    color: white;
+    transition: 0.5s;
+}
+
 .topbox {
     display: flex;
     align-items: center;
     padding: 12px;
-    background-color: #C0D6DF;
+    background-color: rgb(192, 214, 223);
     justify-content: space-between;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.midbox {
+    background-image: url("images/homepic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 270px;
+    color: rgb(233, 241, 246);
+    padding: 10px;
+}
 #footer {
-    color: #565252;
+    color: rgb(86, 82, 82);
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     padding: 12px;
-    background-color: #00000034;
+    background-color: rgba(0, 0, 0, 0.204);
     border-width: 12px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
 }
 #contact {
-    color: #565252;
+    color: rgb(86, 82, 82);
+}
+#instagram {
+    text-decoration: none;
+    color: rgb(86, 82, 82);
+}
+#instagram:hover {
+    color: white;
+    transition: 0.3s;
 }
 .motto {
     font-family: 'Georgia', 'Times New Roman';
     font-size: 18px;
     background-color: #FFFFFF;
-    color: #232E4D;
+    color: rgb(35, 46, 77);
     text-align: center;
 }
 #places-togo {
     font-size: medium;
     font-family: 'Preconnect', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#review2 #review2 {
+#tripadvisor, #helpplanning {
+    color: rgb(35, 46, 77);
+    font-family: 'Preconnect', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+#tripadvisor {
+    text-decoration: none;
+    color: rgb(5, 87, 117);
+}
+#tripadvisor:hover {
+    color: rgb(78, 142, 168);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+#review2 {
     color: darkturquoise;
     font-family: 'Preconnect', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -56,23 +183,92 @@ body {
     height: 40px;
     width: auto;
 }
-
+.reviews-label {
+    font-size: larger;
+    font-style: oblique;
+    color: rgb(81, 121, 136);
+}
 #start-now, #review-vid, #review-site {
     text-decoration: none;
 }
 #review-site:hover {
-    color: #6ea6bc;
+    color: rgb(78, 142, 168);
+    text-decoration: underline;
     transition: 0.3s;
 }
 #review-vid:hover {
-    color: #6ea6bc;
+    color: rgb(110, 166, 188);
     transition: 0.3s;
+}
+#review-vid {
+    text-decoration: underline;
+}
+#start-now:hover {
+    color: rgb(110, 166, 188);
+    transition: 0.3s;
+}
+.email-icon {
+    fill: rgb(46, 180, 233);
+    vertical-align: middle;
+}
+.email-icon:hover {
+    fill: white;
+    transition: 0.3s;
+    align-items: center;
+}
+/* Home Page - reviews */
+
+#reviews-label1 {
+    text-decoration: none;
+    font-family: Georgia;
+    margin-top: 80px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    color: rgb(54, 77, 94);
+}
+#reviews-label1:hover {
+    color: rgb(130, 171, 188);
+    transition: 0.3s;
+}
+.reviews-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.review1, .review2 { 
+    background-color: rgb(201, 229, 241);
+    color: black;
+    padding: 20px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-#start-now:hover {
-    color: #6ea6bc;
-    transition: 0.3s;
+#start-now {
+    font-size: large;
+    font-weight: bold;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+    color: rgb(14, 70, 90);
 }
+#review-site {
+    color: rgb(5, 87, 117);
+}
+
 /* Home Page - navigation links */
 #home, #dash, #explore, #pricing, #sign {
     background: none;
@@ -83,18 +279,31 @@ body {
 
 #home {             /* do this for every page based on what youre on */
     text-decoration: underline;
+    margin-right: 5px;
 }
 #home:hover {
     color: white;
 }
+#dash {
+    margin-right: 5px;
+}
 #dash:hover {
     color: white;
+}
+#explore {
+    margin-right: 5px;
 }
 #explore:hover {
     color: white;
 }
+#pricing {
+    margin-right: 5px;
+}
 #pricing:hover {
     color: white;
+}
+#sign {
+    margin-right: 5px;
 }
 #sign:hover {
     color: white;
@@ -147,7 +356,7 @@ form > div {
 form label {
     height: 50px;
     width: 50px;
-    background-color: #d1d9f2;
+    background-color: rgb(209, 217, 242);
     fill: white;
     color: white;
     border-radius: 10px 0 0 10px;
@@ -170,29 +379,29 @@ form input {
     transition: 150ms ease;
 }
 form input:hover {
-    border-color: #C0D6DF;
+    border-color: rgb(192, 214, 223);
 }
 form input:focus {
     outline: none;
-    border-color: #C0D6DF
+    border-color: rgb(192, 214, 223)
 }
 div:has(input:focus) > label {
-    background-color: #C0D6DF;
+    background-color: rgb(192, 214, 223);
 }
 form input::placeholder {
     color: rgb(118 118 118);
 }
-form button {
+form #login-button {
     margin-top: 10px;
     border: none;
     border-radius: 1000px;
     padding: 14px;
-    background-color: #d1d9f2;
+    background-color: rgb(209, 217, 242);
     font: inherit;
-    cursor: pointer;
 }
-form button:hover {
-    background-color: #C0D6DF;
+
+form #login-button:hover {
+    background-color: rgb(192, 214, 223);
     transition: 0.3s;
 }
 #login-plink a {
@@ -207,6 +416,7 @@ form button:hover {
         width: min(600px, 100%);
     }
 }
+
 .screenreader-bgimage {
     position: absolute;
     width: 1px;
@@ -232,16 +442,16 @@ form button:hover {
     color: white;
 }
 #l-home:hover {
-    color: #C0D6DF;
+    color: rgb(192, 214, 223);
 }
 #l-dash:hover {
-    color: #C0D6DF;
+    color: rgb(192, 214, 223);
 }
 #l-explore:hover {
-    color: #C0D6DF;
+    color: rgb(192, 214, 223);
 }
 #l-pricing:hover {
-    color: #C0D6DF;
+    color: rgb(192, 214, 223);
 }
 
 
@@ -290,7 +500,7 @@ form > div {
 form label {
     height: 50px;
     width: 50px;
-    background-color: #d1d9f2;
+    background-color: rgb(209, 217, 242);
     fill: white;
     color: white;
     border-radius: 10px 0 0 10px;
@@ -313,14 +523,14 @@ form input {
     transition: 150ms ease;
 }
 form input:hover {
-    border-color: #C0D6DF;
+    border-color: rgb(192, 214, 223);
 }
 form input:focus {
     outline: none;
-    border-color: #C0D6DF
+    border-color: rgb(192, 214, 223)
 }
 div:has(input:focus) > label {
-    background-color: #C0D6DF;
+    background-color: rgb(192, 214, 223);
 }
 form input::placeholder {
     color: rgb(118 118 118);
@@ -330,12 +540,12 @@ form button {
     border: none;
     border-radius: 1000px;
     padding: 14px;
-    background-color: #d1d9f2;
+    background-color: rgb(209, 217, 242);
     font: inherit;
     cursor: pointer;
 }
 form button:hover {
-    background-color: #C0D6DF;
+    background-color: rgb(192, 214, 223);
     transition: 0.3s;
 }
 #login-plink a {
@@ -349,4 +559,246 @@ form button:hover {
     .wrapper {
         width: min(600px, 100%);
     }
+}
+
+
+/*  Dashboard Page --- DONT FORGET JAVASCRIPT */
+#d-home, #d-dash, #d-explore, #d-pricing, #d-sign {
+    background: none;
+    color:black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#d-dash {             /* do this for every page based on what youre on */
+    text-decoration: underline;
+    margin-right: 5px;
+}
+#d-home:hover {
+    color: white;
+}
+#d-home {
+    margin-right: 5px;
+}
+#d-dash:hover {
+    color: white;
+}
+#d-explore {
+    margin-right: 5px;
+}
+#d-explore:hover {
+    color: white;
+}
+#d-pricing {
+    margin-right: 5px;
+}
+#d-pricing:hover {
+    color: white;
+}
+#d-sign {
+    margin-right: 5px;
+}
+#d-sign:hover {
+    color: white;
+}
+
+
+#ballato, #met {
+    width: 150px;
+    border-radius: 12px;
+}
+#recentdate {
+    padding-top: 50px;
+}
+#currentdate {
+    padding-top: 20px;
+}
+.table1, .table2 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(225, 235, 239);
+    border-radius: 12px;
+    width: min(100%);
+}
+
+
+
+
+
+
+
+
+/* Pricing Page --- DONT FORGET JAVASCRIPT */
+#p-home, #p-dash, #p-explore, #p-pricing, #p-sign {
+    background: none;
+    color:black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#p-pricing {             /* do this for every page based on what youre on */
+    text-decoration: underline;
+    margin-right: 5px;
+}
+#p-home:hover {
+    color: white;
+}
+#p-home {
+    margin-right: 5px;
+}
+#p-dash:hover {
+    color: white;
+}
+#p-explore {
+    margin-right: 5px;
+}
+#p-explore:hover {
+    color: white;
+}
+#p-dash {
+    margin-right: 5px;
+}
+#p-pricing:hover {
+    color: white;
+}
+#p-sign {
+    margin-right: 5px;
+}
+#p-sign:hover {
+    color: white;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+.plans div {
+    background-color: rgb(201, 229, 241);
+    border: 2px solid rgb(182, 208, 218);
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+.plans h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(33, 97, 123);
+}
+.plans ul {
+    list-style-type: disc;
+    text-align: left;
+    margin: 10px auto;
+    padding-left: 20px;
+}
+.plans li {
+    margin-bottom: 8px;
+}
+
+.plans p {
+    color: rgb(33, 97, 123);
+    margin-top: 10px;
+}
+.freeplan:hover {
+    background-color: rgb(175, 214, 231);
+    transition: 0.4s;
+}
+.goldplan:hover {
+    background-color: rgb(175, 214, 231);
+    transition: 0.4s;
+}
+.premiumplan:hover {
+    background-color: rgb(175, 214, 231);
+    transition: 0.4s;
+}
+
+
+/* About Page --- DONT FORGET JAVASCRIPT */
+#e-home, #e-dash, #e-explore, #e-pricing, #e-sign {
+    background: none;
+    color:black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#e-explore {             /* do this for every page based on what youre on */
+    text-decoration: underline;
+    margin-right: 5px;
+}
+#e-home:hover {
+    color: white;
+}
+#e-home {
+    margin-right: 5px;
+}
+#e-dash:hover {
+    color: white;
+}
+#e-dash {
+    margin-right: 5px;
+}
+#e-explore:hover {
+    color: white;
+}
+#e-pricing {
+    margin-right: 5px;
+}
+#e-pricing:hover {
+    color: white;
+}
+#e-sign {
+    margin-right: 5px;
+}
+#e-sign:hover {
+    color: white;
+}
+
+.aboutfounder {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    font-weight: bold;
+}
+.explorerstory {
+    max-width: 300px;
+    text-align: left;
+}
+.founderpic img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+.aboutreviews {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 50px;
+}
+#aboutreview-label {
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: rgb(192, 214, 223);
+    padding: 30px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 75px;
+}
+.explore-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+#reviewtext {
+    font-size: 1em;
+}
+#reviewoutput p {
+    margin: 6px 0;
+    padding: 6px;
+    background-color: rgb(192, 214, 223);
+    border-radius: 6px;
 }
